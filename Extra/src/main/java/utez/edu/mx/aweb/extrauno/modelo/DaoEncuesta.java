@@ -14,7 +14,7 @@ public class DaoEncuesta {
                 ){
             pstm.setString(1, beanDatos.getNombre());
             pstm.setString(2, beanDatos.getEscuela());
-            pstm.setString(3, beanDatos.getEncuesta());
+            pstm.setInt(3, beanDatos.getEncuesta());
             result = pstm.executeUpdate()==1;
         } catch (Exception e) {
             e.printStackTrace();

@@ -5,7 +5,7 @@ CREATE TABLE `encuesta`.`personas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `Nombre` VARCHAR(150) NULL,
   `Escuela` VARCHAR(150) NULL,
-  `Nombre_Encuesta` VARCHAR(150) NULL,
+  `Nombre_Encuesta` int(10) NULL,
   `pregunta1` int(10) NULL,
   `pregunta2` int(10) NULL,
   `pregunta3` int(10) NULL,

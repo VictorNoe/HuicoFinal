@@ -35,7 +35,7 @@
         </div>
         <div class="col-8">
             <br>
-            <h5>Nombre: <<c: value="${}"</h5>
+            <h5>Nombre:</h5>
             <br>
             <h5>Escuela: Universidad Tecnologica Emiliano Zapata</h5>
         </div>

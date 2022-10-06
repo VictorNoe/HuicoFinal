@@ -14,6 +14,7 @@ import java.io.IOException;
         "/get-encuestado",
         "/encuesta",
         "/inicio",
+        "/consultarEncuesta", //get
         "/update-persona"
 })
 public class ServletEncu extends HttpServlet {
@@ -23,10 +24,18 @@ public class ServletEncu extends HttpServlet {
         String option = request.getServletPath();
         switch (option) {
             case "/get-encuesta":
-
                 request.getRequestDispatcher("WEB-INF/view/encuesta.jsp").forward(request, response);
                 break;
             case "/get-encuestado":
+                break;
+            case "/consultarEncuesta":
+                String encuestaString = request.getParameter("encuesta1") != null? request.getParameter("encuesta1") : "";
+                int encuesta1 = Integer.parseInt(encuestaString);
+                try {
+
+                }catch (Exception e){
+                    response.sendRedirect("get-encuesta");
+                }
                 break;
             default:
                 response.sendRedirect("encuesta");
@@ -45,8 +54,9 @@ public class ServletEncu extends HttpServlet {
                     String nombreString = request.getParameter("nombre") != null? request.getParameter("nombre"):"";
                     String escuelaString = request.getParameter("encuelas") != null? request.getParameter("encuelas"):"";
                     ServiceEncuesta serviceEncuesta = new ServiceEncuesta();
+                    int idencuesta = Integer.parseInt(encuestaString);
                     BeanDatos beanDatos = new BeanDatos();
-                    beanDatos.setEncuesta(encuestaString);
+                    beanDatos.setEncuesta(idencuesta);
                     beanDatos.setNombre(nombreString);
                     beanDatos.setEscuela(escuelaString);
                     boolean result = serviceEncuesta.savePersona(beanDatos);

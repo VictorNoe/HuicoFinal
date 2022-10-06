@@ -18,11 +18,11 @@
                 <label class="form-label">Encuestas</label>
                 <select name="encuesta" class="form-select" aria-label="Default select example">
                     <option selected>Selecciona un opción...</option>
-                    <option value="Encuesta 2018">Encuesta 2018</option>
-                    <option value="Encuesta 2019">Encuesta 2019</option>
-                    <option value="Encuesta 2020">Encuesta 2020</option>
-                    <option value="Encuesta 2021">Encuesta 2021</option>
-                    <option value="Encuesta 2022">Encuesta 2022</option>
+                    <option value="1">Encuesta 2018</option>
+                    <option value="2">Encuesta 2019</option>
+                    <option value="3">Encuesta 2020</option>
+                    <option value="4">Encuesta 2021</option>
+                    <option value="5">Encuesta 2022</option>
                 </select>
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
@@ -30,10 +30,27 @@
                 </div>
                 <div class="mb-3">
                     <label for="escuelas" class="form-label">Escuela</label>
-                    <a href="get-encuesta?id=${}"><input type="text" id="escuelas" class="form-control" placeholder="Ingresa Escuela" name="encuelas"></a>
+                    <input type="text" id="escuelas" class="form-control" placeholder="Ingresa Escuela" name="encuelas">
                 </div>
                 <button type="submit" class="btn btn-success d-grid col-4 mx-auto">Ingresar</button>
             </form>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form action="consultarEncuesta" method="post">
+                <legend class="text-center">Ver resultados <br> encuestas</legend>
+                <label class="form-label">Encuestas</label>
+                <select name="encuesta1" class="form-select" aria-label="Default select example">
+                    <option selected>Selecciona un opción...</option>
+                    <option value="1">Encuesta 2018</option>
+                    <option value="2">Encuesta 2019</option>
+                    <option value="3">Encuesta 2020</option>
+                    <option value="4">Encuesta 2021</option>
+                    <option value="5">Encuesta 2022</option>
+                </select>
+            </form>
+            <br>
+            <a class="btn btn-success d-grid col-4 mx-auto" href="">hola</a>
         </div>
     </div>
 </div>
