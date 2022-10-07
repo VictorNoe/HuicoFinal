@@ -15,6 +15,8 @@ public class BeanDatos {
     public int encuesta7;
     public int encuesta8;
 
+    public int total;
+
     public BeanDatos() {
     }
 
@@ -127,6 +129,13 @@ public class BeanDatos {
 
     public void setEncuesta8(int encuesta8) {
         this.encuesta8 = encuesta8;
+    }
+    public void setTotal(int total){
+        this.total=total;
+    }
+
+    public int getTotal() {
+        return total;
     }
 }
 

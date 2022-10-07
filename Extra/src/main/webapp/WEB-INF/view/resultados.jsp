@@ -5,6 +5,7 @@
   Time: 03:04 p. m.
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -37,12 +38,12 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>Cantida</td>
-                    <th scope="row">1</th>
+                    <td>Cantidad</td>
+                    <th scope="row"><c:out value="${encuesta.cantidad}"/></th>
                 </tr>
                 <tr>
                     <td>Porcentaje</td>
-                    <th scope="row">100%</th>
+                    <th scope="row"><c:out value="${encuesta.porcentaje}"/>%</th>
                 </tr>
                 </tbody>
             </table>
